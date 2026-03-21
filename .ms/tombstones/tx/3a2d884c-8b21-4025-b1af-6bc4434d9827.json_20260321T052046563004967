@@ -1,0 +1,8 @@
+{
+  "id": "3a2d884c-8b21-4025-b1af-6bc4434d9827",
+  "entity_type": "skill",
+  "entity_id": "graph",
+  "phase": "committed",
+  "payload_json": "{\"format_version\":\"1.0\",\"metadata\":{\"id\":\"graph\",\"name\":\"system-check-quick\",\"version\":\"0.1.0\",\"description\":\"Quick system health check for OpenClaw\",\"tags\":[\"system\",\"openclaw\",\"monitoring\"],\"requires\":[],\"provides\":[],\"platforms\":[],\"author\":null,\"license\":null},\"sections\":[{\"id\":\"one-liner\",\"title\":\"One-Liner\",\"blocks\":[{\"id\":\"one-liner-block-1\",\"block_type\":\"code\",\"content\":\"```bash\\nuptime && echo \\\"---\\\" && free -h && echo \\\"---\\\" && df -h / | tail -1 && echo \\\"---\\\" && ps aux | grep -E \\\"(openclaw|ollama|brain)\\\" | grep -v grep | head -5\\n```\"}]},{\"id\":\"full-check\",\"title\":\"Full Check\",\"blocks\":[]},{\"id\":\"common-issues-to-look-for\",\"title\":\"Common Issues to Look For\",\"blocks\":[]},{\"id\":\"urls\",\"title\":\"URLs\",\"blocks\":[{\"id\":\"urls-block-1\",\"block_type\":\"code\",\"content\":\"```bash\\n\\n| Issue | Check | Fix |\\n|-------|-------|-----|\\n| Cron job errors | `openclaw cron list \\\\| grep error` | Check model availability |\\n| PDF stuck | `tail -20 /media/tony/Drive2/Programs/pdf_to_text/process.log` | Reset progress file |\\n| Service down | `ss -tlnp \\\\| grep <port>` | Restart service |\\n| Disk full | `df -h /` | Clean up old files |\\n\\n\\n- Brain: http://localhost:8080/\\n- Graph: http://localhost:8080/graph.html\\n- Dashboard: http://localhost:8765/\\n- brain_all: http://localhost:8768/brain_all_gui.html\"}]}]}",
+  "created_at": "2026-03-21T05:20:46.539605975Z"
+}
